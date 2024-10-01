@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Assets/login_image.png</file>
+        <file>Assets/llfcchat_icon.ico</file>
+        <file>Style/stylesheet.qss</file>
+    </qresource>
+</RCC>
