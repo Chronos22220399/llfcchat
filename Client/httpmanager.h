@@ -18,8 +18,6 @@
  * @date         2024/10/01
  * @history
  **********************************************************************/
-
-
 // the syntax in here is CRTP
 class HttpManager: public QObject, public SingleTon<HttpManager>, std::enable_shared_from_this<HttpManager>
 {
@@ -41,5 +39,7 @@ signals:
     void sig_http_finish(ReqId req_id, QString res, ErrorCodes ec, Modules mod);
     void sig_reg_mod_finish(ReqId req_id, QString res, ErrorCodes ec);
 };
+
+// PostHttpReq 用于处理并发送 http 请求，得到回应后会发送 sig_reg_mod_finish 信号
 
 #endif // HTTPMANAGER_H
